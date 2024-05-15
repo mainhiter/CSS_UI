@@ -39,3 +39,4 @@ class SignInPage(BasePage):
 
     def log_in_button(self):
         return self.find(AuthPageLocators.button_log_in)
+
