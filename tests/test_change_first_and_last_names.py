@@ -1,16 +1,14 @@
+import pytest
+
 from pages.settings_page import SettingsPage
 from pages.settings_page import SettingsPageLocators
 from pages.dashboard_page import DashboardPage
-from utills.action_utills import open
-from utills.action_utills import sign_in_cheat
 from utills.random_utills import generate_random_first_name
 from utills.random_utills import generate_random_last_name
 from time import sleep
 
 
-def test_change_first_and_last_names(browser):
-    open(browser)
-    sign_in_cheat(browser)
+def test_change_first_and_last_names(browser, open, sign_in_cheat):
     sleep(2)
     settings = SettingsPage(browser)
     dashboard = DashboardPage(browser)

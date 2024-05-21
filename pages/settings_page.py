@@ -9,7 +9,7 @@ class SettingsPageLocators:
     input_first_name = (By.XPATH, '//input[@placeholder="First Name"]')
     input_last_name = (By.XPATH, '//input[@placeholder="Last Name"]')
     button_save = (By.XPATH, '//button[@class="_button_variant_solid_1o11o_8 _button_size_regular_1o11o_68 _button_color_third_1o11o_52 _button_noIcons_1o11o_78 _button_1yf2h_8"][1]')
-
+    input_email = (By.XPATH, '//input[@placeholder="Email"]')
 
 
 class SettingsPage(BasePage):
@@ -39,3 +39,19 @@ class SettingsPage(BasePage):
 
     def click_settings_button(self):
         return self.find(SettingsPageLocators.button_settings).click()
+
+    def clear_email(self):
+        self.find(SettingsPageLocators.input_email).send_keys(Keys.CONTROL, "a")
+        self.find(SettingsPageLocators.input_email).send_keys(Keys.DELETE)
+
+    def clear_email(self):
+        return self.find(SettingsPageLocators.input_email).send_keys(Keys.CONTROL + "a" + Keys.BACKSPACE)
+
+    def clear_email(self):
+        return self.find(SettingsPageLocators.input_email).send_keys(Keys.BACKSPACE*20)
+
+    def fill_email(self, string):
+        return self.find(SettingsPageLocators.input_email).send_keys(string)
+
+    def get_email(self):
+        return self.find(SettingsPageLocators.input_email).get_attribute("value")

@@ -12,3 +12,9 @@ def generate_random_last_name():
     return ''.join(
         random.choices(string.ascii_uppercase, k=1) + random.choices(string.ascii_lowercase, k=5)
     )
+
+
+def generate_random_email():
+    return ''.join(
+        random.choices(string.ascii_lowercase, k=5) + ["@gmail.com"]
+    )
