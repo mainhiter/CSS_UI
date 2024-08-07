@@ -11,4 +11,4 @@ class DashboardPage(BasePage):
         super().__init__(browser)
 
     def click_dashboard_button(self):
-        return self.find(DashboardPageLocators.button_dashboard).click()
+        return self.find_element(DashboardPageLocators.button_dashboard).click()

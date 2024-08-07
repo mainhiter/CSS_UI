@@ -23,20 +23,20 @@ class SignInPage(BasePage):
         self.browser.get('https://test.chain-serve.com/dashboard')
 
     def email_button(self):
-        return self.find(AuthPageLocators.button_email)
+        return self.find_element(AuthPageLocators.button_email)
 
     def email_input(self):
-        return self.find(AuthPageLocators.input_email)
+        return self.find_element(AuthPageLocators.input_email)
 
     def fill_email(self, string):
-        return self.find(AuthPageLocators.input_email).send_keys(string)
+        return self.find_element(AuthPageLocators.input_email).send_keys(string)
 
     def next_button(self):
-        return self.find(AuthPageLocators.button_next)
+        return self.find_element(AuthPageLocators.button_next)
 
     def fill_password(self, string):
-        return self.find(AuthPageLocators.input_password).send_keys(string)
+        return self.find_element(AuthPageLocators.input_password).send_keys(string)
 
     def log_in_button(self):
-        return self.find(AuthPageLocators.button_log_in)
+        return self.find_element(AuthPageLocators.button_log_in)
 

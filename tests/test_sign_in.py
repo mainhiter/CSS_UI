@@ -2,9 +2,9 @@ from pages.dashboard_page import DashboardPageLocators
 from pages.dashboard_page import DashboardPage
 from time import sleep
 
-def test_sign_in(browser, open, sign_in_cheat):
+def test_sign_in(browser, open, sign_in_restaurant):
     dashboard = DashboardPage(browser)
-    dashboard_button_text = dashboard.find(DashboardPageLocators.button_dashboard).text
+    dashboard_button_text = dashboard.find_element(DashboardPageLocators.button_dashboard).text
     assert 'Dashboard' in dashboard_button_text
 
 

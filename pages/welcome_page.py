@@ -9,5 +9,5 @@ class WelcomePage(BasePage):
         super().__init__(browser)
 
     def fill_password(self, string):
-        return self.find(input_password).send_keys(string)
+        return self.find_element(input_password).send_keys(string)
 
